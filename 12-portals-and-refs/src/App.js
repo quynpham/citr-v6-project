@@ -1,16 +1,19 @@
-import { useState, StrictMode } from "react";
-import { render } from "react-dom";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-import Details from "./Details";
-import SearchParams from "./SearchParams";
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable react/jsx-no-comment-textnodes */
+import { useState, StrictMode, lazy, Suspense } from "react";
+import { Route, Switch, Link } from "react-router-dom";
 import ThemeContext from "./ThemeContext";
+
+const Details = lazy(() => import("./Details"));
+const SearchParams = lazy(() => import("./SearchParams"));
 
 const App = () => {
   const theme = useState("darkblue");
   return (
-    <ThemeContext.Provider value={theme}>
-      <div>
-        <Router>
+    <StrictMode>
+      <ThemeContext.Provider value={theme}>
+        // eslint-disable-next-line react/jsx-no-comment-textnodes
+        <div>
           <header>
             <Link to="/">Adopt Me!</Link>
           </header>
@@ -22,15 +25,10 @@ const App = () => {
               <SearchParams />
             </Route>
           </Switch>
-        </Router>
-      </div>
-    </ThemeContext.Provider>
+        </div>
+      </ThemeContext.Provider>
+    </StrictMode>
   );
 };
 
-render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-  document.getElementById("root")
-);
+export default App;

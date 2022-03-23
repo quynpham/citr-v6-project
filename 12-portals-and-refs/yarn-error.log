@@ -1,0 +1,67 @@
+Arguments: 
+  /home/qapham/.nvm/versions/node/v14.15.5/bin/node /home/qapham/.yarn/bin/yarn.js add @babel/core -D
+
+PATH: 
+  /home/qapham/code/quynpham/citr-v6-project/12-portals-and-refs/node_modules/.bin:/home/qapham/code/quynpham/citr-v6-project/node_modules/.bin:/home/qapham/code/quynpham/node_modules/.bin:/home/qapham/code/node_modules/.bin:/home/qapham/node_modules/.bin:/home/node_modules/.bin:/node_modules/.bin:/home/qapham/.nvm/versions/node/v14.15.5/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/home/qapham/.yarn/bin:/home/qapham/.config/yarn/global/node_modules/.bin:./bin:./node_modules/.bin:/home/qapham/.nvm/versions/node/v14.15.5/bin:/home/qapham/.rbenv/shims:/home/qapham/.rbenv/bin:/home/qapham/.pyenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Eclipse Adoptium/jdk-11.0.14.101-hotspot/bin:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/qapph/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/qapph/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/heroku/bin:/mnt/c/Program Files/sfdx/bin:/usr/local/sbin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  14.15.5
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/qapham/code/quynpham/citr-v6-project/12-portals-and-refs/package.json: Unexpected string in JSON at position 211
+      at JSON.parse (<anonymous>)
+      at /home/qapham/.yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/home/qapham/.yarn/lib/cli.js:310:30)
+      at /home/qapham/.yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "adopt-me",
+    "version": "1.0.0",
+    "description": "The Adopt Me pet adoption app",
+    "main": "src/index.js",
+    "scripts": {
+      "build:client": "parcel build --public-url .dist/ src/index.html"
+      "format": "prettier --write \"src/**/*.{js,jsx}\"",
+      "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+      "dev": "parcel src/index.html"
+    },
+    "author": "Brian Holt <btholt+citrv6@gmail.com>",
+    "license": "Apache-2.0",
+    "devDependencies": {
+      "@babel/core": "7.12.16",
+      "@babel/eslint-parser": "7.13.4",
+      "@babel/plugin-proposal-class-properties": "7.13.0",
+      "@babel/preset-env": "7.13.5",
+      "@babel/preset-react": "7.12.13",
+      "eslint": "7.18.0",
+      "eslint-config-prettier": "8.1.0",
+      "eslint-plugin-import": "2.22.1",
+      "eslint-plugin-jsx-a11y": "6.4.1",
+      "eslint-plugin-react": "7.22.0",
+      "eslint-plugin-react-hooks": "4.2.0",
+      "parcel": "1.12.3",
+      "prettier": "2.2.1"
+    },
+    "dependencies": {
+      "react": "17.0.1",
+      "react-dom": "17.0.1",
+      "react-router-dom": "5.2.0"
+    },
+    "browserslist": [
+      "last 2 Chrome versions"
+    ]
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
