@@ -29,6 +29,7 @@ app.use((req, res) => {
     res.write(parts[1]);
     res.end();
   })
+}
 
 console.log(`listening on http://localhost:${PORT}`);
 app.listen(PORT);
