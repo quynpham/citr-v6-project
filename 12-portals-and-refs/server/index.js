@@ -28,8 +28,7 @@ app.use((req, res) => {
     res.status(staticContext.statusCode || 200);
     res.write(parts[1]);
     res.end();
-  })
-}
+  });
+});
 
-console.log(`listening on http://localhost:${PORT}`);
-app.listen(PORT);
+console.log(`listening on http://localhost:${PORT}`), app.listen(PORT);
